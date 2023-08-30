@@ -5,19 +5,20 @@ import { CardsList } from "./components/CardsList";
 
 
 function App() {
-
-
-  const [lists, setLists] = useState([]);
+  // almacenar las nuevas listas en localStorage
+  const [lists, setLists] = useState(JSON.parse(localStorage.getItem("lists")) || []);
   
     const addList = (newList) => {
-      setLists([...lists, newList]);
-    };
+      const updatedLists = [...lists, newList];
+      setLists(updatedLists);
+      localStorage.setItem("lists", JSON.stringify(updatedLists));    };
 
     const removeList = (index) => {
       const updatedLists = [...lists];
       // splice elimina un elemento del array y devuelve un nuevo array
       updatedLists.splice(index, 1);
       setLists(updatedLists);
+      localStorage.setItem("lists", JSON.stringify(updatedLists));
     };
   
     return (
