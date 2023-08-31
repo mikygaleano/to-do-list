@@ -27,7 +27,7 @@ function App() {
       if (updatedLists[index].completed) {
         setCount(count - 1); // Restar al contador solo si la tarea está marcada como completada
       }
-      
+
       // splice elimina un elemento del array y devuelve un nuevo array
       updatedLists.splice(index, 1);
       setLists(updatedLists);
@@ -50,7 +50,7 @@ function App() {
 
   
     return (
-      <>
+      <section className="grid place-content-center gap-5">
         <h1 className="text-center">To do list</h1>
         <NewList addList={addList} /> {/* Pasando addList aquí */}
         {lists.map((list, index) => (
@@ -60,8 +60,8 @@ function App() {
             onComplete={() => toggleCompleted(index)}
             onDelete={() => removeList(index)} />
         ))}
-        <p>Completed: {count}</p>
-      </>
+        <p className="text-center mt-5">Completed: {count}</p>
+      </section>
     );
 }
 
