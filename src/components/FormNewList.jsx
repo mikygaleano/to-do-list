@@ -27,10 +27,11 @@ export const FormNewList = ({ removeForm, addList })=> {
     };
     
     return (
-        <div className="w-full max-h-screen flex flex-col items-center p-2 border rounded-md shadow-md">
-          <form className="w-1/2 flex flex-col flex-wrap" onSubmit={handleSubmit}>
+        <div className="w-full bg-blue-100 max-h-screen flex flex-col items-center p-2 border-black rounded-md shadow-md">
+          <form className="w-1/2 flex flex-col flex-wrap place-content-center gap-2" onSubmit={handleSubmit}>
             <h3 className="text-center">Add new list</h3>
             <input
+              className="hover:bg-cyan-50 bg-transparent border rounded p-1"
               type="text"
               name="title"
               placeholder="Title"
@@ -39,21 +40,31 @@ export const FormNewList = ({ removeForm, addList })=> {
               required
             />
             <input
+              className="bg-transparent"
               type="date"
               name="date"
               onChange={handleInputChange}
               value={formData.date}
             />
             <input
+              className="hover:bg-cyan-50 bg-transparent border rounded p-1"
               type="text"
               name="description"
               placeholder="Description..."
               onChange={handleInputChange}
               value={formData.description}
             />
-            <button type="submit">Add List</button>
+            <button
+              className="bg-yellow-200 rounded-md p-1 w-20"
+              type="submit">
+                Add List
+            </button>
           </form>
-          <button onClick={removeForm}>Remove form</button>
+          <button 
+            className="bg-red-500 p-1 rounded-md w-20 self-end"
+            onClick={removeForm}>
+              X
+          </button>
         </div>
       );
 }

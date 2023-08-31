@@ -50,8 +50,8 @@ function App() {
 
   
     return (
-      <section className="grid place-content-center gap-5">
-        <h1 className="text-center">To do list</h1>
+      <section className="w-full min-h-screen grid place-content-center gap-5 bg-blue-100">
+        <h1 className="text-center font-black text-5xl">To do list</h1>
         <NewList addList={addList} /> {/* Pasando addList aquí */}
         {lists.map((list, index) => (
           <CardsList 
@@ -60,7 +60,7 @@ function App() {
             onComplete={() => toggleCompleted(index)}
             onDelete={() => removeList(index)} />
         ))}
-        <p className="text-center mt-5">Completed: {count}</p>
+        <p className="text-center mt-5 mb-5">Completed: {count}</p>
       </section>
     );
 }
