@@ -60,7 +60,7 @@ function App() {
             onComplete={() => toggleCompleted(index)}
             onDelete={() => removeList(index)} />
         ))}
-        <p className="text-center mt-5 mb-5">Completed: {count}</p>
+        <p className="mt-5 mb-5 text-start">Completed: {count}</p>
       </section>
     );
 }
