@@ -27,7 +27,7 @@ export const FormNewList = ({ removeForm, addList })=> {
     };
     
     return (
-        <div className="w-full bg-blue-100 max-h-screen flex flex-col items-center p-2 border-black rounded-md shadow-md">
+        <div className="w-full h-fit bg-blue-100 max-h-screen flex flex-col items-center p-2 border-black rounded-md shadow-md">
           <form className="w-1/2 flex flex-col flex-wrap place-content-center gap-2" onSubmit={handleSubmit}>
             <h3 className="text-center">Add new list</h3>
             <input

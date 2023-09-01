@@ -50,7 +50,7 @@ function App() {
 
   
     return (
-      <section className="w-full min-h-screen grid place-content-center gap-5 bg-blue-100">
+      <section className="w-full min-h-screen grid justify-center gap-5 bg-blue-100">
         <h1 className="text-center font-black text-5xl">To do list</h1>
         <NewList addList={addList} /> {/* Pasando addList aquí */}
         {lists.map((list, index) => (
